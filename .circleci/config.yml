@@ -22,7 +22,7 @@ jobs:
       # Then run your tests!
       - run:
           name: Test
-          command: export MAVEN_OPTS=" -XX:MaxPermSize=1024m -Xmx3072m"; mvn -f core/pom.xml --batch-mode -P build-web-console,use-built-in-nodejs -Dout=$(pwd)/ci/qlog.conf -Dhttp.keepAlive=false package -T 2
+          command: export MAVEN_OPTS=" -XX:MaxPermSize=1024m -Xmx3072m"; mvn -f core/pom.xml --batch-mode -P build-web-console,use-built-in-nodejs -Dout=$(pwd)/ci/qlog.conf -Dhttp.keepAlive=false package
       - store_artifacts:
           path:  core/target
 
